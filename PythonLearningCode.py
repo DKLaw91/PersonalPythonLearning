@@ -9,8 +9,6 @@ def RockPaperScissors():
  
   player = False
  
-  playcount = 0
- 
   while player == False:
     for i in range (3):
       player = input ('Rock, Paper, Scissors?')
@@ -33,10 +31,8 @@ def RockPaperScissors():
           print('You win! ', player, ' cut ', computer)
       else:
         print('Try again!')
-      playcount = playcount + 1
       player = False
       computer = t[randint(0,2)]
-    
     playagain = input('Shall we play again?')
     if playagain == 'no':
       print('Okay :( Goodbye!')
