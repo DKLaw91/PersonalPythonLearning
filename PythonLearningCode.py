@@ -1,10 +1,36 @@
-def joke():
+def jokes():
+  from random import randint
+  
+  def jk1():
     joke = input('What is brown and sounds like a bell?')
     joke = joke.lower()
     if joke.strip() == 'dung':
-        print('Ba dum tsh! Beaten to the punch line.')
+      print('Ba dum tsh! Beaten to the punch line.')
     else:
-        print('Dung!')
+      print('Dung!')
+  
+  def jk2():
+    joke = input('Where did Sally go after the explosion?')
+    joke = joke.lower()
+    if joke.strip() == 'everywhere':
+      print('Ba dum tsh! Beaten to the punch line.')
+    else:
+      print('Everywhere!')
+    answer = True
+    while answer == True:
+      joke2 = input('Knock, Knock.')
+      joke2 = joke2.lower()
+      if joke2.strip() == "whos there?":
+        print('Not Sally!')
+        answer = False
+      else:
+        print('Come on. You know the drill.')
+        
+    
+  t=[jk1, jk2]
+  computer=t[randint(0,1)]
+  
+  computer()
 
 
 def mathtrick():
@@ -156,7 +182,7 @@ def intro():
         elif option ==5:
             print('Get ready for a joke!...')
             print('...')
-            joke()
+            jokes()
         elif option == 6:
             userexit = ()
             while userexit != 'y' or 'n':
