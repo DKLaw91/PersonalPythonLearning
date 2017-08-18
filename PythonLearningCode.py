@@ -218,7 +218,8 @@ def intro():
                     break
                 else:
                     print('Invalid input. Please use Y for Yes or N for No.')
-
+        else:
+            print('Please enter a value between 1 & 6.')   
 
 intro()
 
