@@ -81,6 +81,23 @@ def cputurn(computer):
       cpu = False
     else:
       continue
+
+
+def checkBoard(board):
+  if board[topL] and board[topM] and board[topR] == 'o':
+    print('You lose. Better luck next time.')
+  if board[topL] and board[midM] and board[botR] == 'o':
+    print('You lose. Better luck next time.')
+  if board[topL] and board[midL] and board[botL] == 'o':
+    print('You lose. Better luck next time.')
+    
+  if board[topL] and board[topM] and board[topR] == 'x':
+    print('You win! Well played.')
+  if board[topL] and board[midM] and board[botR] == 'x':
+    print('You win! Well played.')
+  if board[topL] and board[midL] and board[botL] == 'x':
+    print('You win! Well played.') 
+  
   
 
 
