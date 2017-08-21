@@ -25,7 +25,7 @@ def printBoard(board):
 
 from random import randint
 
-def playerturn():
+def playerturn(player):
   correctValue = True
   while correctValue:
     player = int(input('where would you like to go?'))
@@ -53,7 +53,7 @@ def playerturn():
       input('Place on board already taken, please choose again.')
       continue
       
-    
+def cputurn(computer):    
   cpu = True
   while cpu:
     computer = randint(1,9)
@@ -85,5 +85,9 @@ def playerturn():
 
 
 while True:
-  playerturn()
+  playerturn(player)
+  cputurn(computer)
   printBoard(board)
+ 
+  
+    
