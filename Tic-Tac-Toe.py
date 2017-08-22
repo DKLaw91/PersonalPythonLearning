@@ -98,3 +98,67 @@ while True:
   printBoard(board)
   cputurn(computer)
   printBoard(board)
+          
+          
+  _____________________________________________
+
+from random import randint
+
+topL=1
+topM=2
+topR=3
+midL=4
+midM=5
+midR=6
+botL=7
+botM=8
+botR=9
+
+player=''
+computer=''
+
+
+board = { topL: '1', topM: '2', topR: '3', 
+          midL: '4', midM: '5', midR: '6', 
+          botL: '7', botM: '8', botR: '9'}
+          
+          
+def printBoard():
+  print(board[topL] + '|' + board[topM] + '|' + board[topR])
+  print('-+-+-')
+  print(board[midL] + '|' + board[midM] + '|' + board[midR])
+  print('-+-+-')
+  print(board[botL] + '|' + board[botM] + '|' + board[botR])
+
+
+def playerturn():
+  correctValue = True
+  while correctValue:
+    player = int(input('where would you like to go?'))
+    if str(player) in board.values():
+      board[player] = 'x'
+      correctValue=False
+    else:
+      input('Place on board already taken, please choose again.')
+      continue
+      
+      
+def cputurn():    
+  cpu = True
+  while cpu:
+    computer = randint(1,9)
+    if str(computer) in board.values():
+      if computer != player:
+        input('CPU: ' + str(computer))
+        board[computer] = 'o'
+      cpu = False
+    else:
+      continue
+
+
+while True:
+  playerturn()
+  printBoard()
+  cputurn()
+  printBoard()
+
