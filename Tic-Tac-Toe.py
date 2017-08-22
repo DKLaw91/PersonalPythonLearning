@@ -121,7 +121,18 @@ computer=''
 board = { topL: '1', topM: '2', topR: '3', 
           midL: '4', midM: '5', midR: '6', 
           botL: '7', botM: '8', botR: '9'}
-          
+ 
+def winner():
+  if board[topL]== 'x':
+    if board[topM]=='x':
+      if board[topR]=='x':
+        print('you win.')
+    if board[midM]=='x':
+      if board[botR]=='x':
+        print('you win.')
+    if board[midL]=='x':
+      if board[botL]=='x':
+        print('you win.')          
           
 def printBoard():
   print(board[topL] + '|' + board[topM] + '|' + board[topR])
