@@ -5,11 +5,12 @@ print("Just ignore Jess' bullshit")
 print(r'Pretend like \ he is not here')
 print('Where did he \\ go')
 print()
-print(r'''This is alright...
+Newline=(r'''This is alright...
 this multiline...
 stuff!
 Much easier than... 
 that \t crap''')
+print(Newline)
 print(len(Jeff))
 print(Jeff[0:14] + ' ' + Jeff[28:])
 print()
@@ -46,4 +47,5 @@ List=['My', 'name', 'is', 'Jeff!']
 print(' '.join(List))
 print(', '.join(List))
 print(Jeff.split())
+print(Newline.split('\n'))
 
