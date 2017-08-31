@@ -52,10 +52,11 @@ _49 =12
 _50 =8
 
 
+
 from random import randint
 Three=[18]
 Four=[]
-Five=[32,46]
+Five=[32,40,46]
 Six=[8,16,33,34]
 Seven=[1,13,24,36,42]
 Eight=[6,37,50]
@@ -66,7 +67,7 @@ Twelve=[3,7,11,12,22,44,49]
 Thirteen=[21,]
 Fourteen=[]
 Fifteen=[17]
-Sixteen=[10,27,]
+Sixteen=[10,27]
 Seventeen=[20]
 
 
@@ -74,6 +75,10 @@ Seventeen=[20]
 
 
 print(len(Three+Four+Five+Six+Seven+Eight+Nine+Ten+Eleven+Twelve+Thirteen+Fourteen+Fifteen+Sixteen+Seventeen))
+
+
+print(Ten[randint(0,(len(Ten)-1))])
 print(Ten[randint(0,(len(Ten)-1))])
 print(Eleven[randint(0,(len(Eleven)-1))])
 print(Twelve[randint(0, (len(Twelve)-1))])
+print(Seven[randint(0,(len(Seven)-1))])
