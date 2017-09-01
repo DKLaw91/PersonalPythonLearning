@@ -61,6 +61,10 @@ Names = {'Jeff':'Brah', 'Steff':'Brahlet','Joe':'Brah','Jeffald':'Brah', 'Steffa
 
 printNames(Names, 15,8)
 
+strip='        Jeffald, my man.      '
+print(strip)
+print(strip.strip()+ ' You did dun get stripped son.')
+
 
 
 
