@@ -48,4 +48,23 @@ print(' '.join(List))
 print(', '.join(List))
 print(Jeff.split())
 print(Newline.split('\n'))
+print('Jeff'.rjust(20,'o'))
+print('Steff'.ljust(20,'o'))
+print('Joe'.center(20,'o'))
+
+def printNames(names, leftWidth, rightWidth):
+  print('NAMES'.center(leftWidth+rightWidth, '-'))
+  for k, v in names.items():
+    print(k.ljust(leftWidth, ' ') + v.ljust(rightWidth, ' '))
+
+Names = {'Jeff':'Brah', 'Steff':'Brahlet','Joe':'Brah','Jeffald':'Brah', 'Steffald':'Brahlet'}
+
+printNames(Names, 15,8)
+
+
+
+
+
+
+
 
