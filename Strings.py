@@ -57,18 +57,10 @@ def printNames(names, leftWidth, rightWidth):
   for k, v in names.items():
     print(k.ljust(leftWidth, ' ') + v.ljust(rightWidth, ' '))
 
-Names = {'Jeff':'Brah', 'Steff':'Brahlet','Joe':'Brah','Jeffald':'Brah', 'Steffald':'Brahlet'}
+Names = {'Jeff':'Brah', 'Steff':'Brahlet','Joe':'Brah','Jeffald':'Brah', 'Steffald':'Brahlet', 'Jeffaldine': 'Brahless'}
 
 printNames(Names, 15,8)
 
 strip='        Jeffald, my man.      '
 print(strip)
 print(strip.strip()+ ' You did dun get stripped son.')
-
-
-
-
-
-
-
-
