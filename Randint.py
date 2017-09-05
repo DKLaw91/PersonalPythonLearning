@@ -77,7 +77,9 @@ Seventeen=[20]
 print(len(Three+Four+Five+Six+Seven+Eight+Nine+Ten+Eleven+Twelve+Thirteen+Fourteen+Fifteen+Sixteen+Seventeen))
 
 
-print(Ten[randint(0,(len(Ten)-1))])
+_1=(Ten[randint(0,(len(Ten)-1))])
+print(_1)
+Ten.remove(_1)
 print(Ten[randint(0,(len(Ten)-1))])
 print(Eleven[randint(0,(len(Eleven)-1))])
 print(Twelve[randint(0, (len(Twelve)-1))])
