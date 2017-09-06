@@ -53,3 +53,12 @@ for i in range(len(message)):
   if isPhoneNumber(chunk):
     print('Phone number found: ' + chunk)
 print('Done.')
+
+import re
+
+phoneNumRegex=re.compile(r'\d{3}-\d{3}-\d{4}')
+
+mo=phoneNumRegex.search('My number is 415-555-4242.')
+print('Phone number found: ' + mo.group())
+print(mo)
+
