@@ -26,7 +26,6 @@ def isPhoneNumber(text):
 isPhoneNumber('4154555-1234')
 
 _________________________________________________________________________________
-
 def isPhoneNumber(text):
   if len(text) != 12:
     return False
@@ -62,13 +61,22 @@ mo=phoneNumRegex.search('My number is 415-555-4242.')
 print('Phone number found: ' + mo[0])
 print(mo[0])
 
-phoneNumRegex=re.compile(r'(\d{3})-(\d{3})-(\d{4})')
+phoneNumRegex=re.compile(r'(\d{3})-(\d{3}-\d{4})')
 
 mo=phoneNumRegex.search('My number is 415-555-4242.')
+print(mo.group(1,2,))
 print(mo.group(1))
 print(mo.group(2))
-print(mo.group(3))
 print(mo[0])
+
+AreaCode=mo.group(1)
+print(AreaCode)
+
+MainNumber=mo.group(2)
+print(MainNumber)
+
+print(mo.groups())
+
 
 
 
