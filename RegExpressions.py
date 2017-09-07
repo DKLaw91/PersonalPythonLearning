@@ -77,6 +77,18 @@ print(MainNumber)
 
 print(mo.groups())
 
+heroRegex=re.compile(r'Thor|Gorr')
+mo1=heroRegex.search('Thor and Gorr.')
+print(mo1[0])
+
+mo1=heroRegex.findall('Thor and Gorr')
+print(mo1[0] + ' ' + mo1[1])
+
+
+batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
+mo=batRegex.search('Batmobile lost a wheel.')
+print(mo[0])
+
 
 
 
