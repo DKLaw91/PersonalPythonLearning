@@ -61,9 +61,9 @@ mo=phoneNumRegex.search('My number is 415-555-4242.')
 print('Phone number found: ' + mo[0])
 print(mo[0])
 
-phoneNumRegex=re.compile(r'(\d{3})-(\d{3}-\d{4})')
+phoneNumRegex=re.compile(r'(\d{3})?-(\d{3}-\d{4})')
 
-mo=phoneNumRegex.search('My number is 415-555-4242.')
+mo=phoneNumRegex.search('My number is -555-4242.')
 print(mo.group(1,2,))
 print(mo.group(1))
 print(mo.group(2))
@@ -88,6 +88,19 @@ print(mo1[0] + ' ' + mo1[1])
 batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
 mo=batRegex.search('Batmobile lost a wheel.')
 print(mo[0])
+
+batRegex=re.compile(r'Bat(wo)?man')
+mo1=batRegex.search('Batman is a tran.')
+print(mo1[0])
+mo2=batRegex.search('Batwoman can Stan.')
+print(mo2[0])
+
+batRegex=re.compile(r'Bat(wo| )?man')
+mo3=batRegex.search('Bat man has a plan.')
+print(mo3[0])
+mo4=batRegex.search('Batwoman has a plan.')
+print(mo4[0])
+
 
 
 
