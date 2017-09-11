@@ -63,7 +63,7 @@ print(mo[0])
 
 phoneNumRegex=re.compile(r'(\d{3})?-(\d{3}-\d{4})')
 
-mo=phoneNumRegex.search('My number is -555-4242.')
+mo=phoneNumRegex.search('My number is 258-555-4242.')
 print(mo.group(1,2,))
 print(mo.group(1))
 print(mo.group(2))
@@ -95,15 +95,23 @@ print(mo1[0])
 mo2=batRegex.search('Batwoman can Stan.')
 print(mo2[0])
 
-batRegex=re.compile(r'Bat(wo| )?man')
+batRegex=re.compile(r'Bat(wo| )*?man')
 mo3=batRegex.search('Bat man has a plan.')
 print(mo3[0])
-mo4=batRegex.search('Batwoman has a plan.')
+mo4=batRegex.search('Batwowowowowowoman has a plan.')
 print(mo4[0])
 
+haRegex=re.compile(r'(Ha){3,5}')
+mo1=haRegex.search('HaHaHaHa')
+print(mo1[0])
 
+mo2=haRegex.search('Ha')
+print(mo2==None)
 
+greedyRegex=re.compile(r'(Ha){3,5}')
+mo1=greedyRegex.search('HaHaHaHaHa')
+print(mo1[0])
 
-
-
-
+Regex=re.compile(r'(Ha){3,5}?')
+mo2=Regex.search('HaHaHaHaHa')
+print(mo2[0])
