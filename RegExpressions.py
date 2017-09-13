@@ -133,3 +133,6 @@ print(vowelRegex.findall('Robocop eats baby food. BABY FOOD.'))
 print('Consonant')
 consonantRegex=re.compile(r'[^aeiouAEIOU]')
 print(consonantRegex.findall('Robocop eats baby food. BABY FOOD.'))
+
+beginHello=re.compile(r'^Hello')
+print(beginHello.findall('Hello World'))
