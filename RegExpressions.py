@@ -148,6 +148,8 @@ atRegex=re.compile(r'.at')
 mo1=atRegex.findall('The cat in the hat sat on the flat mat.')
 print(mo1)
 
+import re
+
 nameRegex=re.compile(r'First Name: (.*) Last Name: (.*)')
 mo=nameRegex.search('First Name: Jeffald Last Name: Bodagard')
 print(mo[0])
@@ -171,4 +173,16 @@ print(robocop.search('Robocop is part man.').group())
 print(robocop.search('ROBOCOP for the chop.').group())
 print(robocop.search('robocop was a flop.').group())
 
+namesRegex=re.compile(r'Agent (\w)\w+')
+print(namesRegex.sub(r'\1****', 'Agent Jeff gave the secret documents to Agent Jeffald.'))
 
+phoneRegex=re.compile(r'''(
+(\d{3}|\(\d{3}\)?
+(\s|-|\.)?
+\d{3}
+(\s|-|\.)
+\d{4}
+(\s*(ext|x|ext.)\s*\d{2,5})?
+)''', re.VERBOSE)
+  
+print(phoneRegex.search('345-455-798'))
