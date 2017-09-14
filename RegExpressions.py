@@ -136,3 +136,39 @@ print(consonantRegex.findall('Robocop eats baby food. BABY FOOD.'))
 
 beginHello=re.compile(r'^Hello')
 print(beginHello.findall('Hello World'))
+
+endNumber=re.compile(r'\d$')
+print(endNumber.search('Your number is 42'))
+
+wholeStringIsNum=re.compile(r'^\d+$')
+mo1=wholeStringIsNum.findall('1234567890')
+print(mo1)
+
+atRegex=re.compile(r'.at')
+mo1=atRegex.findall('The cat in the hat sat on the flat mat.')
+print(mo1)
+
+nameRegex=re.compile(r'First Name: (.*) Last Name: (.*)')
+mo=nameRegex.search('First Name: Jeffald Last Name: Bodagard')
+print(mo[0])
+print(mo.group(1))
+print(mo.group(2))
+
+nolineRegex=re.compile('.*')
+mo=nolineRegex.search('''Serve the public trust. 
+Protect the Innocent.
+Uphold the Law.''')
+print(mo[0])
+
+newlineRegex=re.compile('.*', re.DOTALL)
+mo=newlineRegex.search('''Serve the public trust.
+Protect the Innocent.
+Uphold the Law.''')
+print(mo[0])
+
+robocop=re.compile(r'robocop', re.I)
+print(robocop.search('Robocop is part man.').group())
+print(robocop.search('ROBOCOP for the chop.').group())
+print(robocop.search('robocop was a flop.').group())
+
+
