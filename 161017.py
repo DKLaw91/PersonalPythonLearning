@@ -162,3 +162,26 @@ print(data[1])
 print(data[2])
 
 print(format_string + '%s %s. Your current balance is £%.2f.' % (data[0], data[1], data[2]))
+____________________________________________________________________________________________
+https://www.learnpython.org/en/Basic_String_Operations
+astring='Hello World!'
+astring2='Hello World!'
+
+print("single quotes are ' '")
+print(len(astring))
+
+print(astring.index('o'))
+
+print(astring.count('l'))
+
+print(astring[6:11])
+
+print(astring[::-1])
+
+print(astring.startswith('Hello'))
+print(astring.endswith('dasda'))
+
+afewwords=astring.split(' ')
+print(afewwords)
+
+print('##############')
