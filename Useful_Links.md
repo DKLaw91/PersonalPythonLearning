@@ -11,3 +11,5 @@ https://www.bluehost.com/special/websitesetup
 https://automatetheboringstuff.com/
 
 https://repl.it/languages/python3
+
+https://www.learnpython.org/en/Lists
