@@ -85,3 +85,23 @@ second_name=names[1]
 print('The second name on the list is: ' + second_name)
 
 print('#########'
+______________________________________________________________________________________
+https://www.learnpython.org/en/Basic_Operators
+number1=int(input('First Number? '))
+number2=int(input('Second Number? '))
+number3=int(input('Third Number? '))
+number=(number1+number2*number3)
+print(number)
+
+print('########')
+
+remainder= number1 % number2
+print(remainder)
+
+print('########')
+
+squared= number2**2
+print(squared)
+
+cubed=(number2**3)
+print(cubed)
