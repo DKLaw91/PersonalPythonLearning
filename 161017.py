@@ -57,3 +57,31 @@ if myint == 20:
   print('Integer: ' + str(myint))
 
 print('##########')
+
+mylist=[]
+mylist.append(input('Name? '))
+mylist.append(input('Age? '))
+mylist.append(input('Gender? '))
+
+for i in mylist:
+  print(i)
+
+print('#############')
+
+numbers=[]
+strings=[]
+names=['John', 'Eric', 'Jeff']
+
+numbers.append(1)
+numbers.append(2)
+numbers.append(3)
+print(numbers)
+
+strings.append('hello')
+strings.append('world')
+print(strings)
+
+second_name=names[1]
+print('The second name on the list is: ' + second_name)
+
+print('#########'
