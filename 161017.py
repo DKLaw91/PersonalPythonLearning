@@ -142,3 +142,23 @@ print(big_list.count(y))
   
 if big_list.count(x) == 10 and big_list.count(y) == 10:
   print('Great!')
+      
+______________________________________________________________________________________
+name='Jeff'
+print('Hello, %s!' % name)
+age=23
+print('%s is %s years old.' % (name, age))
+
+print('%.2f' % age)
+print('%X' % age)
+
+print('###############')
+
+data=('John', 'Doe', 53.44)
+format_string='Hello '
+
+print(data[0])
+print(data[1])
+print(data[2])
+
+print(format_string + '%s %s. Your current balance is £%.2f.' % (data[0], data[1], data[2]))
