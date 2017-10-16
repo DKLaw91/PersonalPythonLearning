@@ -105,3 +105,40 @@ print(squared)
 
 cubed=(number2**3)
 print(cubed)
+
+print('########')
+
+helloworld= 'Jeff' + ' is hench on the bench'
+print(helloworld)
+
+lotsofjeffs='Jeff ' * 10
+print(lotsofjeffs)
+
+even=[2,4,6,8]
+odd=[1,3,5,7,9]
+allnumbers=even + odd
+print(allnumbers)
+
+jeff=(['jeff', 'hench']*3)
+print(jeff)
+
+print('########')
+
+x='x'
+y='y'
+
+x_list=[x,x,x,x,x,x,x,x,x,x]
+y_list=[y,y,y,y,y,y,y,y,y,y]
+big_list=x_list + y_list
+print('x_list contains: ' + str(len(x_list)))
+print('y_list contains: ' + str(len(y_list)))
+print(big_list)
+
+if x_list.count(x) == 10 and y_list.count(y) == 10:
+  print('Almost there...')
+  
+print(big_list.count(x))
+print(big_list.count(y))
+  
+if big_list.count(x) == 10 and big_list.count(y) == 10:
+  print('Great!')
