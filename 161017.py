@@ -187,7 +187,7 @@ print(afewwords)
 print('##############')
       
 ------------------------------------------------------------------------------------------
-s="Strands are welcome!"
+s="Strain and overcome!"
 print("Length of s = %d" % len(s))
 
 print("The first occurrence of the letter a = %d" % s.index('a'))
