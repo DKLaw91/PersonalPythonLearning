@@ -107,6 +107,44 @@ for i in numbers:
     break
   elif i % 2 == 0:
     print(i)
+  ____________________________________________
+https://www.learnpython.org/en/Functions
+
+def my_function():
+  print("Hello, I am your Function.")
   
-  
+my_function()
+print()
+
+def with_arg(username, greeting):
+  print("Hello, " + username + "! " + greeting)
+
+with_arg('Jeffald', 'Sup brah')
+print()
+
+def sum_num(a,b):
+  return a+b
+
+j=sum_num('Jeff', 'ald')
+print(j)
+print()
+
+# Modify this function to return a list of strings as defined above
+def list_benefits():
+    benefits=["More organized code", "More readable code", "Easier code reuse", "Allows Programmers to share and connect code together"]
+    return(benefits)
+      
+      
+    
+
+# Modify this function to concatenate to each benefit - " is a benefit of functions!"
+def build_sentence(benefit):
+    return(benefit + " is a benefit of functions!")
+
+def name_the_benefits_of_functions():
+    list_of_benefits = list_benefits()
+    for benefit in list_of_benefits:
+      print(build_sentence(benefit))
+
+name_the_benefits_of_functions()
 
