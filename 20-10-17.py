@@ -37,3 +37,68 @@ if first_array and first_array[0] == 1:
 if not second_number:
     print("6")
 ______________________________________________________________
+https://www.learnpython.org/en/Loops
+
+primes=[2,3,5,7]
+for prime in primes:
+  print(prime)
+print()
+
+for i in primes:
+  print(i)
+print()
+  
+for x in range(5): # prints 0-4
+  print(x)
+print()
+
+for x in range(1,6): # prints 1-5
+  print(x)
+print()
+
+# prints 1-5
+count = 1
+while count<=5:
+  print(count)
+  count+=1 # This is the same as count = count +1
+print()
+
+count=1
+while True:
+  print(count)
+  count+=1
+  if count==6:
+    break
+print()
+
+# Prints out only odd numbers
+for x in range(10):
+  # check if x is even
+  if x % 2 == 0: # if x divides by 2 with no remainder
+    continue
+  print(x)
+print()
+
+count=1
+while count<6:
+  print(count)
+  count+=1
+else:
+  print("Count value reached: " + str(count))
+print()
+
+for i in range(1,10):
+  if (i%6==0):
+    break
+  print(i)
+else:
+  print("This is not printed because for loop is terminated because of break but not due to fail in condition")
+  
+  
+  
+  
+  
+  
+  
+  
+  
