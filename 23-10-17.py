@@ -1,3 +1,5 @@
+https://www.learnpython.org/en/Classes_and_Objects
+____________________________________________________
 class myClass:
   variable="blah"
   
