@@ -97,5 +97,23 @@ if "Jake" in phonebook:
     print("Jake is listed in the phonebook.")
 if "Jill" not in phonebook:
     print("Jill is not listed in the phonebook.")
+_____________________________________________________________
+https://www.learnpython.org/en/Modules_and_Packages
+
+import urllib
+
+print(dir(urllib)) # Lists functions of imported Module
+print(help(urllib.__builtins__))# provides helpful information of selected Module function
+print()
+
+
+# In this exercise, you will need to print an alphabetically sorted list of all functions in the re module, which contain the word find
+
+import re
+
+directory=dir(re)
+for i in directory:
+  if not i.find("find"):
+    print(i)
 
 
