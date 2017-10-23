@@ -115,5 +115,48 @@ directory=dir(re)
 for i in directory:
   if not i.find("find"):
     print(i)
+_____________________________________________
+https://www.learnpython.org/en/Numpy_Arrays
+
+height=[1.87,1.87,1.82,1.91,1.90,1.85]
+weight=[81.65,97.52,95.25,92.93,86.13,88.45]
+
+import numpy as np
+
+np_height=np.array(height) # np.array() converts list to Numpy Array
+np_weight=np.array(weight)
+
+print(height)
+print(np_height)
+
+print(weight)
+print(np_weight)
+
+bmi=np_weight/np_height**2
+
+print(bmi)
+
+print(bmi[bmi>25])
+print()
+
+# Exercise
+weight_kg = [81.65, 97.52, 95.25, 92.98, 86.18, 88.45]
+
+# Create a numpy array np_weight_kg from weight_kg
+np_weight_kg=np.array(weight_kg)
+
+# Create np_weight_lbs from np_weight_kg
+np_weight_lbs=np_weight_kg*2.2
+
+
+# Print out np_weight_lbs
+for i in np_weight_lbs:
+  print(str(i) + ' lbs')
+  
+  
+  
+
+
+
 
 
