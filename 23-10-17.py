@@ -50,4 +50,36 @@ car2.value=10000.00
 print(car1.description())
 print()
 print(car2.description())
+_______________________________________________________________
+https://www.learnpython.org/en/Dictionaries
+  
+phonebook={}
+phonebook["John"]=914065212 # Accepts max of 9 digits!
+phonebook["Jeff"]=87405683
+phonebook["Jeffald"]=745450808
+print(phonebook)
+print()
+
+# Alternative method of entry
+phonebook= {
+  "Maloy" : 966241398, # Don't forget Comma!
+  "'Cyril'" : 761747235,
+  "Magoo" : 866408643,
+  "John" : 914065212,
+  "Jeff" : 87405683,
+  "Jeffald" : 745450808
+}
+print(phonebook)
+print()
+
+for name, number in phonebook.items():
+  print("Phone number of " + name + " is: 07" + str(number))
+  print()
+
+del phonebook["John"]
+
+print(phonebook)
+print()
+
+
 
