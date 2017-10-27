@@ -58,7 +58,19 @@ print(word_lengths)
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 newlist = [int(number) for number in numbers if number >0]
 print(newlist)
+____________________________________________________________
+https://www.learnpython.org/en/Multiple_Function_Arguments
 
+def foo(first, second, third, *therest):
+  print("First: " + first)
+  print("Second: " + second)
+  print("Third: " + third)
+  print("And all the rest... ")
+  for i in therest:
+    print(i)
+  
+
+foo('Jeff', 'Jeffald', 'Jeffaldine', 'Cyril', 'Magoo', 'Maloy')
 
 
 
