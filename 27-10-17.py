@@ -103,6 +103,35 @@ if bar(1,2,3,magicnumber = 6) == False:
     print("Great.")
 if bar(1,2,3,magicnumber = 7) == True:
     print("Awesome!")
+_________________________________________________
+https://www.learnpython.org/en/Regular_Expressions
+  
+import re
+pattern=re.compile(r"\[(on|off)\]")
+print(re.search(pattern, "Mono: Playback 65 [75%] [-16.50dB] [on]")) # Returns match
+print(re.search(pattern, "Nada....:-")) # Returns None as no match found
+print()
+
+
+  # Exercise: make a regular expression that will match an email
+def test_email(your_pattern):
+    pattern = re.compile(your_pattern)
+    emails = ["john@example.com", "python-list@python.org", "wha.t.`1an?ug{}ly@email.com"]
+    for email in emails:
+        if not re.match(pattern, email):
+            print("You failed to match %s" % (email))
+        elif not your_pattern:
+            print("Forgot to enter a pattern!")
+        else:
+            print("Pass")
+            print(email)
+pattern = r"\S*.\S*.(\S*)" # ********** MY CODE ************
+test_email(pattern)
+
+
+
+
+
 
 
 
