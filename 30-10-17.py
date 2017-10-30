@@ -112,7 +112,25 @@ def func(u,v,w,x):
 #Enter your code here to create and print with your partial function
 answer=partial(func, 8, 4, 2)
 print(answer(12))
+_____________________________________-
+https://www.learnpython.org/en/Code_Introspection
+  
+# Define the Vehicle class.
+class Vehicle:
+    name = "Fermi"
+    kind = "car"
+    color = "Red"
+    value = 100.00
+    def description(self):
+        desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
+        return desc_str
 
+# Print a list of all attributes of the Vehicle class.
+# Your code goes here
+
+for i in dir(Vehicle):
+  print(i)
+  
 
 
 
