@@ -55,7 +55,39 @@ print()
 c = set(["Jake", "John", "Eric"])
 d = set(["John", "Jill"])
 print(c.difference(d))
+___________________________________________-
+https://www.learnpython.org/en/Serialization
+  
+import json
 
+json_string=json.dumps([1,2,3,"a","b", "c"])
+print(json_string) # Creates JSON Data Structure
+print()
+print(json.loads(json_string)) # Reverts back to standard Data Structure
+print()
+
+import pickle
+
+pickled_string=pickle.dumps([1,2,3,"a","b","c"])
+print(pickled_string)
+print(pickle.loads(pickled_string))
+print()
+
+import json
+
+# fix this function, so it adds the given name
+# and salary pair to salaries_json, and return it
+def add_employee(salaries_json, name, salary):
+  salaries_json[name]=salary
+  return salaries_json
+
+# test code
+salaries = {"Alfred" : 300, "Jane" : 400 }
+new_salaries = add_employee(salaries, "Me", 800)
+decoded_salaries = new_salaries
+print(decoded_salaries["Alfred"])
+print(decoded_salaries["Jane"])
+print(decoded_salaries["Me"])
 
 
 
