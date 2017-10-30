@@ -88,6 +88,30 @@ decoded_salaries = new_salaries
 print(decoded_salaries["Alfred"])
 print(decoded_salaries["Jane"])
 print(decoded_salaries["Me"])
+_____________________________________
+https://www.learnpython.org/en/Partial_functions
+  
+from functools import partial
+
+def multiply(x,y):
+  return x*y
+
+print(multiply(2,4))
+
+dbl=partial(multiply,2)
+print(dbl(4))
+
+tpl=partial(multiply,3)
+print(tpl(4))
+print()
+
+#Following is the exercise, function provided:
+from functools import partial
+def func(u,v,w,x):
+    return u*4 + v*3 + w*2 + x
+#Enter your code here to create and print with your partial function
+answer=partial(func, 8, 4, 2)
+print(answer(12))
 
 
 
