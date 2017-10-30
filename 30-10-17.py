@@ -15,14 +15,14 @@ print()
 actor= {"name": "Chris Hemsworth", "rank": "Legend"}
 
 #Function to modify, should return the last name of the actor - think back to previous lessons for how to get it
-def get_last_name(actor):
+def get_last_name():
     lastname=(actor["name"].split(" ")[1])
     return lastname
 
 #Test code
-get_last_name(actor)
+get_last_name()
 print("All exceptions caught! Good job!")
-print("The actor's last name is %s." % get_last_name(actor))
+print("The actor's last name is %s." % get_last_name())
 
 
 
