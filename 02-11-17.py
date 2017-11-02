@@ -36,4 +36,17 @@ def num(num):
 
 num(15)
 num(-15)
-    
+print()
+
+def multiplier(multiplier):
+  def multiplygen(oldfunc):
+    def newfunc(*args, **kwds):
+      return multiplier*oldfunc(*args, **kwds)
+    return newfunc
+  return multiplygen
+
+@multiplier(5) # Defines multiplier
+def num(num):
+  return num # Will not work with print() as return string not integer
+
+print(num(15))
