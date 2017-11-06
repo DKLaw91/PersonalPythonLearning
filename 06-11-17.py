@@ -97,7 +97,16 @@ def basicoperators():
   if big_list.count(x) == 10 and big_list.count(y) == 10:
       print("Great!")  
 #########################################    
-
+def stringformat():
+  names=["Jeff", "Jeffald", "Jeffaldine"]
+  ages=[26,22,21]
+  x=0
+  for i in ages:
+    print("Hello, %s! You are %d years old." % (names[x], ages[x]))
+    x+=1
+  
+  
+stringformat()
 
 
     
