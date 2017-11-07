@@ -103,10 +103,41 @@ def stringformat():
   x=0
   for i in ages:
     print("Hello, %s! You are %d years old." % (names[x], ages[x]))
-    x+=1
+     x+=1
   
+  data = ("John", "Doe", 53.44)
+  format_string = "Hello %s %s. Your current balance is $%.2f."
+
+  print(format_string % (data[0], data[1], data[2]))
   
-stringformat()
+def basicstrop():
+  astring="Jeff & Jeffald!"
+  astring2="Jeff & Jeffald!"
+  print("Single quotes are ' '")
+  print(len(astring))
+  print(len(astring2))
+  if len(astring) == len(astring2):
+    print("G'damn Jeff! It's Jeffald.")
+  print(astring.index("f")) # Only returns first instance of letter
+  print(astring.count("f")) # Returns number of all instances
+  print(astring[0:4])
+  print(astring[0:10:2]) # Returns 1st character through to 9th skipping every other
+  print(astring[::-1]) # To reverse string
+  print(astring.lower())
+  print(astring.upper())
+  if astring.startswith("Jeff"):
+    print("Yeah Brah.")
+  if not astring.endswith("Nah"):
+    print("Nah Brah.")
+  split=astring.split(" ")
+  print(split)
+  if "Jeff" in split:
+    print("You found me!")
+  if "Jeffaldine" not in split:
+    print("Da fuq outta 'ere!")
+  
+
+basicstrop()
 
 
     
