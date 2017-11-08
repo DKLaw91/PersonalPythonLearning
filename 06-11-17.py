@@ -135,9 +135,24 @@ def basicstrop():
     print("You found me!")
   if "Jeffaldine" not in split:
     print("Da fuq outta 'ere!")
+#############################################
+def conditions():
+  x=2
+  print(x==2)
+  print(x==3)
+  print(x<3)
+  name="Jeff"
+  age=26
+  if name=="Jeff" and age == 26:
+    print("Jeff, you 26 year old sikkunt!")
+  if name == "Jeff" or name == "Jeffald":
+    print("Jeff? Jeffald? I don't know?!")
+  if name in ["Jeff", "Jeffald"]:
+    print("I'm so confused.")
+  
   
 
-basicstrop()
+conditions()
 
 
     
