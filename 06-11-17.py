@@ -137,31 +137,59 @@ def basicstrop():
     print("Da fuq outta 'ere!")
 #############################################
 def conditions():
-  x=2
-  print(x==2)
-  print(x==3)
-  print(x<3)
   name="Jeff"
   age=26
-  if name=="Jeff" and age == 26:
-    print("Jeff, you 26 year old sikkunt!")
-  if name == "Jeff" or name == "Jeffald":
-    print("Jeff? Jeffald? I don't know?!")
-  if name in ["Jeff", "Jeffald"]:
-    print("I'm so confused.")
+  print(name=="Jeff")
+  print(name=="Jeffald")
+  print(age==1)
+  print(age==26)
+  print(age<30)
+  print()
+  if name=="Jeff" and age==26:
+    print("Looking aesthetic Jeff!")
+  if name =="Jeff" or name=="Thor":
+    print("You're New Doug!")
+  print()
+  names= ["Jeff", "Jeffald", "Jeffaldine"]
+  if name in names:
+    print("You're in!")
+    print()
+  if age ==26:
+    print("26?! Noice!")
+  else:
+    print("Nah brah")
+  print()
+  names2=["Jeff", "Jeffald", "Jeffaldine"]
+  print(names==names2)
+  print(names is names2)
+  print()
+  print(not True)
+  print(not False)
+  print()
   
   
-
+  # change this code
+  number = 20
+  second_number = 0
+  first_array = [1,2,3]
+  second_array = [1,2]
+  
+  if number > 15:
+      print("1")
+  
+  if first_array:
+      print("2")
+  
+  if len(second_array) == 2:
+      print("3")
+  
+  if len(first_array) + len(second_array) == 5:
+      print("4")
+  
+  if first_array and first_array[0] == 1:
+      print("5")
+  
+  if not second_number:
+      print("6")
+  
 conditions()
-
-
-    
-
-
-
-
-
-
-
-
-
