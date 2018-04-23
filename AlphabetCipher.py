@@ -32,8 +32,8 @@ def printDictionary(dict):
 
 populateDict(codeDict)
 
-keyword="snitch"
-message="thepackagehasbeendelivered"
+keyword="cloak"
+message="iamtheprettiestunicorn"
 #Repeats keyword to match length of message#
 keywordmatch=keyword
 count=0
@@ -54,6 +54,17 @@ for letter in message:
     count+=1
 print("Encoded Message: " + encodedmessage)
 #Encodes message using codeDict#
+
+#Decodes message using codeDict#
+count=0
+decodedmessage=""
+for letter in encodedmessage:
+    keywordletter=keywordmatch[count]
+    indexofletter=Alphabet[codeDict[keywordletter]].index(encodedmessage[count])
+    decodedmessage=decodedmessage+codeDict.keys()[(codeDict.values()).index(indexofletter)]
+    count+=1
+print("Decoded Message: " + decodedmessage)
+#Decodes message using codeDict#
 
 
 
