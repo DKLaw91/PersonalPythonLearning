@@ -21,7 +21,7 @@ codeDict={
 #Popoulates Dictionary with letters of alphabet matched to numbers#
 def populateDict(dict):
     count=0
-    for number in range(1,27):
+    for number in range(0,26):
         codeDict[Alphabet[0][count]]=number
         count+=1
 
@@ -30,9 +30,7 @@ def printDictionary(dict):
         print(key + ":" + str(value))
 #Popoulates Dictionary with letters of alphabet matched to numbers#
 
-printAlphabet(Alphabet)        
 populateDict(codeDict)
-printDictionary(codeDict)
 
 keyword="snitch"
 message="thepackagehasbeendelivered"
@@ -42,8 +40,28 @@ count=0
 while len(keywordmatch) != len(message):
     keywordmatch=keywordmatch+keywordmatch[count]
     count+=1
-print(keywordmatch)
+print("Keyword: " + keyword)
+print("Repeated Keyword: " + keywordmatch)
+print("Message: " + message)
 #Repeats keyword to match Length of message#
+
+#Encodes message using codeDict#
+count=0
+encodedmessage=""
+for letter in message:
+    keywordletter=keywordmatch[count]
+    encodedmessage=encodedmessage+Alphabet[codeDict[keywordletter]][codeDict[letter]]
+    count+=1
+print("Encoded Message: " + encodedmessage)
+#Encodes message using codeDict#
+
+
+
+    
+
+        
+
+
 
 
 
