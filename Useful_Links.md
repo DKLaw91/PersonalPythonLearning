@@ -16,7 +16,7 @@ https://www.learnpython.org/en/Lists
 
 http://pythonfiddle.com
 
-https://www.tutorialspoint.com/execute_python_online.php
+https://www.tutorialspoint.com/execute_python3_online.php
 
 https://www.codecademy.com/
 
