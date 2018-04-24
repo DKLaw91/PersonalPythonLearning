@@ -61,16 +61,14 @@ decodedmessage=""
 for letter in encodedmessage:
     keywordletter=keywordmatch[count]
     indexofletter=Alphabet[codeDict[keywordletter]].index(encodedmessage[count])
-    decodedmessage=decodedmessage+codeDict.keys()[(codeDict.values()).index(indexofletter)]
+    addtomessage=""
+    for key, value in codeDict.items():
+        if value == indexofletter:
+            addtomessage=key
+    decodedmessage=decodedmessage+addtomessage
     count+=1
 print("Decoded Message: " + decodedmessage)
 #Decodes message using codeDict#
-
-
-
-    
-
-        
 
 
 
