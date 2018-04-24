@@ -32,8 +32,8 @@ def printDictionary(dict):
 
 populateDict(codeDict)
 
-keyword="cloak"
-message="iamtheprettiestunicorn"
+keyword="hombre"
+message="woo avengers infinity war this saturday son"
 #Repeats keyword to match length of message#
 keywordmatch=keyword
 count=0
@@ -49,8 +49,11 @@ print("Message: " + message)
 count=0
 encodedmessage=""
 for letter in message:
-    keywordletter=keywordmatch[count]
-    encodedmessage=encodedmessage+Alphabet[codeDict[keywordletter]][codeDict[letter]]
+    if letter == " ":
+        encodedmessage=encodedmessage+" "
+    else:
+        keywordletter=keywordmatch[count]
+        encodedmessage=encodedmessage+Alphabet[codeDict[keywordletter]][codeDict[letter]]
     count+=1
 print("Encoded Message: " + encodedmessage)
 #Encodes message using codeDict#
@@ -59,12 +62,15 @@ print("Encoded Message: " + encodedmessage)
 count=0
 decodedmessage=""
 for letter in encodedmessage:
-    keywordletter=keywordmatch[count]
-    indexofletter=Alphabet[codeDict[keywordletter]].index(encodedmessage[count])
     addtomessage=""
-    for key, value in codeDict.items():
-        if value == indexofletter:
-            addtomessage=key
+    keywordletter=keywordmatch[count]
+    if letter == " ":
+        addtomessage=addtomessage+" "
+    else:
+        indexofletter=Alphabet[codeDict[keywordletter]].index(encodedmessage[count])
+        for key, value in codeDict.items():
+            if value == indexofletter:
+                addtomessage=addtomessage+key
     decodedmessage=decodedmessage+addtomessage
     count+=1
 print("Decoded Message: " + decodedmessage)
