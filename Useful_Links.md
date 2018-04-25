@@ -20,6 +20,8 @@ https://www.tutorialspoint.com/execute_python3_online.php
 
 https://www.codecademy.com/
 
+https://www.reddit.com/r/dailyprogrammer/search?q=%5Beasy%5D&sort=new&restrict_sr=on
+
 #C++ Learning#
 
 http://www.learncpp.com/cpp-tutorial/1-3a-a-first-look-at-cout-cin-endl/
