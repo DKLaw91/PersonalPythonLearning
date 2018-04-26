@@ -1,5 +1,3 @@
-import datetime
-
 days31=["January", "March", "May", "July", "August", "October", "December"]
 days30=["April", "June", "September", "November"]
 days28=["February"]
@@ -19,15 +17,16 @@ months={
     "December":12
 }
 
-weekdays=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+weekdays=["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 dayofdates={
     
 }
 
-inputyear=3
-inputmonth=12
+inputyear=2018
+inputmonth=4
 inputday=28
+inputtotal="(%d, %d, %d)" % (inputyear,inputmonth,inputday)
 
 years=range(1,inputyear+1)
 
@@ -50,22 +49,36 @@ for year in years:
                 if count >6:
                     count=0
         if strmonth in days28:
-            if year % 4 == 0 and year % 100 !=0:
-                days=range(1,30)
+            year4=year%4
+            year100=year%100
+            year400=year%400
+            if year4 == 0:
+                if year100 == 0:
+                    if year400 == 0:
+                        days=range(1,30)
+                        dayofdates[year, intmonth,day]=weekdays[count]
+                        count+=1
+                        if count >6:
+                            count=0
+                    else:
+                        days=range(1,29)
+                        dayofdates[year, intmonth,day]=weekdays[count]
+                        count+=1
+                        if count >6:
+                            count=0
+            else:
+                days=range(1,29)
                 dayofdates[year, intmonth,day]=weekdays[count]
                 count+=1
                 if count >6:
                     count=0
-            days=range(1,29)
-            for day in days:
-                dayofdates[year, intmonth,day]=weekdays[count]
-                count+=1
-                if count >6:
-                    count=0
+
+
 
 for day, key in dayofdates.items():
-    print(day,key)
-
+    if str(day) == inputtotal:
+        print("%d/%d/%d is a %s" % (day[2], day[1], day[0], key))
+        
         
 
     
