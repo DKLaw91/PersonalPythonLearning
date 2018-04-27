@@ -37,8 +37,19 @@ while count != 101:
 print(sequence)
 
 # Largest Possible Number
-numbers=[50,2,1,9] # 95021 desired output
+numbers=[9,50,2,1] # 95021 desired output
 
+def sortlist(numbers):
+    returnlist=[]
+    count=0
+    while count != len(numbers):
+        for number in numbers:
+            returnlist.append(max(numbers))
+            numbers.remove(max(numbers))
+    return returnlist
+
+numbers=sortlist(numbers)
+print(numbers)
 
 def largestnum(numbers):
     stringnum=[]
@@ -46,7 +57,7 @@ def largestnum(numbers):
         stringnum.append(str(number))
     count=9
     returnnum=""
-    while len(returnnum) != len(numbers)+1:
+    while len(returnnum) != len(stringnum)+1:
         for number in stringnum:
             if (count-int(number[0])) == 0:
                 returnnum+=(number)
