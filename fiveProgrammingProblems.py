@@ -35,6 +35,29 @@ while count != 101:
     num+=sequence[count]
     count+=1
 print(sequence)
+
+# Largest Possible Number
+numbers=[50,2,1,9] # 95021 desired output
+
+
+def largestnum(numbers):
+    stringnum=[]
+    for number in numbers:
+        stringnum.append(str(number))
+    count=9
+    returnnum=""
+    while len(returnnum) != len(numbers)+1:
+        for number in stringnum:
+            if (count-int(number[0])) == 0:
+                returnnum+=(number)
+        if count != 0:
+            count-=1
+        else:
+            count=9
+    return int(returnnum)
+        
+
+print(largestnum(numbers))
     
 
 # https://www.shiftedup.com/2015/05/07/five-programming-problems-every-software-engineer-should-be-able-to-solve-in-less-than-1-hour
