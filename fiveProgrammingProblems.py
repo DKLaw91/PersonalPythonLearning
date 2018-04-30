@@ -35,8 +35,9 @@ while count != 101:
     num+=sequence[count]
     count+=1
 print(sequence)
-# Largest Possible Number
-numbers="17 32 91 7 46"
+
+# 4. Largest Possible Number
+numbers="420 34 19 71 341"
 
 ########################################
 def sortlist(numbers):
@@ -56,16 +57,23 @@ for number in numbers.split(" "):
 onedigit=[]
 for number in list:
     if len(str(number)) == 1:
-        onedigit.append(int(str(number)*2))
+        onedigit.append(int(str(number)*3))
 
 
 twodigits=[]
 for number in list:
     if len(str(number)) == 2:
-        twodigits.append(number)
+        twodigits.append(int(str(number)+str(number)[1]))
 
 
-combined=sortlist((onedigit+twodigits))
+threedigits=[]
+for number in list:
+    if len(str(number)) == 3:
+        threedigits.append(number)
+
+
+
+combined=sortlist((onedigit+twodigits+threedigits))
 
 
 
@@ -73,6 +81,9 @@ for number in combined:
     if number in onedigit:
         singledigit=int(str(number)[0])
         combined[combined.index(number)]=singledigit
+    elif number in twodigits:
+        doubledigits=int(str(number)[0:2])
+        combined[combined.index(number)]=doubledigits
 
 
 largestnum=""
