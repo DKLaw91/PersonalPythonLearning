@@ -36,8 +36,9 @@ while count != 101:
     count+=1
 print(sequence)
 # Largest Possible Number
-numbers=[5,50,56] # 95021 desired output
+numbers="17 32 91 7 46"
 
+########################################
 def sortlist(numbers):
     returnlist=[]
     count=0
@@ -47,28 +48,39 @@ def sortlist(numbers):
             numbers.remove(max(numbers))
     return returnlist
 
-numbers=sortlist(numbers)
-print(numbers)
+list=[]
+for number in numbers.split(" "):
+    list.append(int(number))
 
-def largestnum(numbers):
-    stringnum=[]
-    for number in numbers:
-        stringnum.append(str(number))
-    returnnum=""
-    count=9
-    while len(returnnum) <= len(stringnum):
-        for number in stringnum:
-            if (count-int(number[0])) == 0:
-                returnnum+=(number)
-        if count != 0:
-            count-=1
-        else:
-            count=9
-    return int(returnnum)
-        
 
-print(largestnum(numbers))
-    
+onedigit=[]
+for number in list:
+    if len(str(number)) == 1:
+        onedigit.append(int(str(number)*2))
+
+
+twodigits=[]
+for number in list:
+    if len(str(number)) == 2:
+        twodigits.append(number)
+
+
+combined=sortlist((onedigit+twodigits))
+
+
+
+for number in combined:
+    if number in onedigit:
+        singledigit=int(str(number)[0])
+        combined[combined.index(number)]=singledigit
+
+
+largestnum=""
+
+for num in combined:
+    largestnum+=str(num)
+
+print(largestnum)
 
 # https://www.shiftedup.com/2015/05/07/five-programming-problems-every-software-engineer-should-be-able-to-solve-in-less-than-1-hour
 
