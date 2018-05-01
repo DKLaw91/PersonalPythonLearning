@@ -122,7 +122,7 @@ while answer != target:
                     possibility+=("+"+str(nextnum))
                     break
             if "9" in possibility:
-                if eval(possibility) == 100:
+                if eval(possibility) == target:
                     if possibility not in possibilities:
                         possibilities.append(possibility)
                         if len(possibilities)==11:
