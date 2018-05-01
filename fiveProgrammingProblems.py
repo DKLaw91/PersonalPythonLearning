@@ -96,10 +96,6 @@ print(largestnum)
 # 5. Output Possibilities
 import random
 
-mylist=[]
-for n in range(1,10):
-    mylist.append(n)
-
 target=100
 
 possibilities=[]
@@ -109,9 +105,9 @@ answer=0
 while answer != target:
     count=1
     possibility=""
-    for n in mylist:
+    for n in range(1,10):
         while n <= 8:
-            nextnum=mylist[(mylist.index(n)+1)]
+            nextnum=n+1
             for f in range(1,4):
                 f=random.randint(1,3)
                 if possibility=="":
