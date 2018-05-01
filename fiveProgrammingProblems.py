@@ -103,7 +103,6 @@ possibilities=[]
 answer=0
 
 while answer != target:
-    count=1
     possibility=""
     for n in range(1,10):
         while n <= 8:
