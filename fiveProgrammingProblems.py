@@ -94,14 +94,11 @@ for num in combined:
 print(largestnum)
 
 # 5. Output Possibilities
-
 import random
 
 mylist=[]
 for n in range(1,10):
     mylist.append(n)
-
-functions=["+", "-", "1"]
 
 target=100
 
@@ -115,7 +112,7 @@ while answer != target:
     for n in mylist:
         while n <= 8:
             nextnum=mylist[(mylist.index(n)+1)]
-            for f in functions:
+            for f in range(1,4):
                 f=random.randint(1,3)
                 if possibility=="":
                     possibility=str(n)
