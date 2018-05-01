@@ -93,17 +93,13 @@ for num in combined:
 
 print(largestnum)
 
-# 5. 
+# 5. Output Possibilities
 
 import random
 
 mylist=[]
 for n in range(1,10):
     mylist.append(n)
-
-print(mylist)
-joined=int("".join(str(n) for n in mylist))
-print(joined)
 
 functions=["+", "-", "1"]
 
@@ -120,7 +116,7 @@ while answer != target:
         while n <= 8:
             nextnum=mylist[(mylist.index(n)+1)]
             for f in functions:
-                f=random.randint(0,3)
+                f=random.randint(1,3)
                 if possibility=="":
                     possibility=str(n)
                 elif f == 3:
@@ -133,25 +129,19 @@ while answer != target:
                     possibility+=("+"+str(nextnum))
                     break
             if "9" in possibility:
-                answer=eval(possibility)
-                if answer==100:
-                    print(possibility)
+                if eval(possibility) == 100:
+                    if possibility not in possibilities:
+                        possibilities.append(possibility)
+                        if len(possibilities)==11:
+                            answer=100
                 break
             else:
                 break
         continue
 
+possibilities=sorted(possibilities)
+for p in possibilities:
+    print(p)
+
 # https://www.shiftedup.com/2015/05/07/five-programming-problems-every-software-engineer-should-be-able-to-solve-in-less-than-1-hour
-
-
-
-
-
-
-
-
-
-
-
-
 
