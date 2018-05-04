@@ -160,3 +160,16 @@ squareodd=[i*i for i in usrinp if i % 2 != 0]
 print(squareodd)
 
 17.
+account=0
+
+usrinp="D 300\nD 300\nW 200\nD 100"
+
+t=usrinp.splitlines()
+for l in t:
+    if l.split(" ")[0] == "D":
+        account+=int(l.split(" ")[1])
+    elif l.split(" ")[0] == "W":
+        account-=int(l.split(" ")[1])
+print(account)
+
+18.
