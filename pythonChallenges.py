@@ -73,5 +73,51 @@ for n in numbers:
 print(",".join(output))
 
 7.
+X=3
+Y=5
 
+array=[]
 
+for r in range(0,X):
+    array.append([0 for i in range(0,Y)])
+    for c in range(0,Y):
+        array[r][c]=r*c
+print(array)
+
+8.
+usrinp="without,hello,bag,world"
+
+words=sorted(usrinp.split(","))
+print(",".join(words))
+
+9.
+usrinp="Hello world, I am Jeff!"
+
+print(usrinp.upper())
+
+10.
+usrinp="hello world and practice makes perfect and hello world again"
+
+words=sorted(set(usrinp.split(" ")))
+print(words)
+
+11.
+usrinp="0100,0011,1010,1001"
+numbers=[b for b in usrinp.split(",")]
+for b in numbers:
+    n=(int(str(b),2))
+    if n%5==0:
+        print(b)
+
+12.
+numbers=[]
+for n in range(1000,3001):
+    number=""
+    for d in str(n):
+        if int(d)%2==0:
+            number+=d
+    if len(number)==4:
+        numbers.append(number)
+print(",".join(numbers))
+
+13.
