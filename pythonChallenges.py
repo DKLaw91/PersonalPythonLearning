@@ -173,3 +173,41 @@ for l in t:
 print(account)
 
 18.
+usrinp="ABd1234@1,a F1#,2w3E*,2We3345"
+
+attempts=usrinp.split(",")
+
+def checkletter(p):
+    for l in p:
+        if l.isalpha():
+            return True
+    return False
+
+def checkcap(p):
+    for l in p:
+        if l.istitle():
+            return True
+    return False
+
+def checknum(p):
+    for l in p:
+        if l.isalnum():
+            return True
+    return False
+
+def checkchar(p):
+    for l in p:
+        if l in ["$","#","@"]:
+            return True
+    return False
+
+
+for p in attempts:
+    if len(p)>=6 and len(p)<=12:
+        if checkletter(p):
+            if checkcap(p):
+                if checknum(p):
+                    if checkchar(p):
+                        print(p)
+
+19.
