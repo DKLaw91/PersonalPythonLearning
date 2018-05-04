@@ -121,3 +121,42 @@ for n in range(1000,3001):
 print(",".join(numbers))
 
 13.
+usrinp="Hello World! 123"
+split=usrinp.split(" ")
+words=[i.strip("123456789") for i in split if i.strip("123456789") != ""]
+num=[i for i in split if i not in words]
+letters=0
+for w in words:
+    for l in w:
+        if l.isalpha():
+            letters +=1
+digits=0
+for n in num:
+    digits+=len(n)
+print("LETTERS: %d" % letters)
+print("DIGITS: %d" % digits)
+
+14.
+usrinp="Hello world!"
+usrinp=[i for i in usrinp if i.isalpha()]
+upper=[i for i in usrinp if i.istitle()]
+lower=[i for i in usrinp if i not in upper]
+print("UPPER CASE: %d \nLOWER CASE: %d" % (len(upper), len(lower)))
+
+15.
+usrinp=9
+def answer(n):
+    s=str(n)
+    s2=int(s*2)
+    s3=int(s*3)
+    s4=int(s*4)
+    return int(s)+s2+s3+s4
+
+print(answer(usrinp))
+
+16.
+usrinp=1,2,3,4,5,6,7,8,9
+squareodd=[i*i for i in usrinp if i % 2 != 0]
+print(squareodd)
+
+17.
