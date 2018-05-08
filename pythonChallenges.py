@@ -272,3 +272,34 @@ def wordcount(usrinp):
 wordcount(usrinp)
 
 23.
+def square(num):
+    return num**2
+
+print(square(5))
+
+24.
+def square(num):
+    """Return the Square Number of a given value"""
+    return num**2
+    
+print(square.__doc__)
+print(abs.__doc__)
+
+25.
+class Person(object):
+    name="person's"
+    age="years of age"
+    def __init__(self,name,gender,age):
+        self.name=name
+        if gender=="m":
+            self.gender="he"
+        elif gender=="f":
+            self.gender="she"
+        self.age=age
+
+Jeff=Person("Jeff","m",18)
+print("This %s name is %s and %s is %d %s" % (Person.name, Jeff.name, Jeff.gender, Jeff.age, Person.age))
+Jeffaldine=Person("Jeffaldine","f",24)
+print("This %s name is %s and %s is %d %s" % (Person.name, Jeffaldine.name, Jeffaldine.gender, Jeffaldine.age, Person.age))
+
+26.
