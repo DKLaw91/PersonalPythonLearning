@@ -212,30 +212,15 @@ for p in attempts:
 
 19.
 from operator import itemgetter
-
-class person(object):
-    def __init__(self, name, age, height):
-        self.self=self
-        self.name=name
-        self.age=age
-        self.height=height
-
-Tom=person("Tom", 19, 80)
-John=person("John", 20, 90)
-Jony1=person("Jony", 17,93)
-Jony2=person("Jony", 17,91)
-Json=person("Json", 21, 85)
-Tom2=person("Tom",18,79)
-
-people=[Tom,John,Jony1,Jony2,Json,Tom2]
-
-newdict={}
-count=0
-for p in people:
-    newdict[count]=tuple([p.name,p.age,p.height])
-    count+=1
+newdict={
+    0:("Tom",19,80),
+    1:("John",20,90),
+    2:("Jony",17,93),
+    3:("Jony",17,91),
+    4:("Json",21,85)
+}
 
 sortlist=sorted(newdict.values(),key=itemgetter(0,1,2))
 print(sortlist)
-
+    
 20.
