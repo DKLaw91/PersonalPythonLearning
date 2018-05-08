@@ -224,3 +224,14 @@ sortlist=sorted(newdict.values(),key=itemgetter(0,1,2))
 print(sortlist)
     
 20.
+class numgen(object):
+    def __init__(self):
+        self.self=self
+    def returnlist(self,num):
+        self.num=num
+        return [n for n in range(1,num) if n % 7 ==0]
+
+num1=numgen()
+print(num1.returnlist(100))
+
+21.
