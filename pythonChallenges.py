@@ -259,3 +259,16 @@ fromstart=(abs(position["x"]-0)+abs(position["y"]-0))
 print("Starting Position: 0,0")
 print("Current Position: %d,%d" % (position["x"],position["y"]))
 print("User is %d moves from starting position." % fromstart)
+
+22.
+usrinp="Hello, my name is Jeff. Jeff is my name, so it is, so it is!"
+
+def wordcount(usrinp):
+    words=["".join(l for l in w if l.isalnum()) for w in usrinp.split(" ")]
+    remdup=sorted(set(words))
+    for w in remdup:
+        print("%s:%d" % (w,words.count(w)))
+
+wordcount(usrinp)
+
+23.
