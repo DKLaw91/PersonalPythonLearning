@@ -303,3 +303,182 @@ Jeffaldine=Person("Jeffaldine","f",24)
 print("This %s name is %s and %s is %d %s" % (Person.name, Jeffaldine.name, Jeffaldine.gender, Jeffaldine.age, Person.age))
 
 26.
+def sumofnum(num1,num2):
+    return num1+num2
+
+print(sumofnum(12,45))
+
+27.
+def inttostr(int):
+    print(str(int))
+
+inttostr(45)
+
+28.
+def calculatestr(str):
+    num1=str.split(" ")[0]
+    num2=str.split(" ")[1]
+    print(int(num1)+int(num2))
+
+calculatestr("45 78")
+
+29.
+def joinstr(str1,str2):
+    print(str1 + " " + str2)
+
+joinstr("Hello","Jeff")
+
+30.
+def printlongest(str1,str2):
+    if len(str1)>len(str2):
+        print(str1)
+    elif len(str1)<len(str2):
+        print(str2)
+    else:
+        print(str1/n)
+        print(str2)
+
+printlongest("Jeffald","Jeff")
+printlongest("Jeff","Jeff")
+
+31.
+def evenodd(num):
+    if num % 2 == 0:
+        print("%d is an even number." % num)
+    else:
+        print("%d is an odd number." % num)
+
+evenodd(45)
+evenodd(68)
+
+32.
+def printdict(num):
+    dict={}
+    for n in range(1,num+1):
+        dict[n]=n**2
+    print(dict)
+
+printdict(10)
+
+33.
+def printdict(num):
+    dict={}
+    for n in range(1,num+1):
+        dict[n]=n**2
+    print(dict)
+
+printdict(20)
+
+34.
+def printdict(num):
+    dict={}
+    for n in range(1,num+1):
+        dict[n]=n**2
+    for v in dict.values():
+        print(v)
+printdict(20)
+
+35.
+def printdict(num):
+    dict={}
+    for n in range(1,num+1):
+        dict[n]=n**2
+    for k in dict:
+        print(k)
+printdict(20)
+
+36.
+def printlist(num):
+    list=[]
+    for n in range(1,num+1):
+        list.append(n**2)
+    print(list)
+printlist(20)
+
+37.
+def printlist(num):
+    list=[]
+    for n in range(1,num+1):
+        list.append(n**2)
+    print(list[0:5])
+printlist(20)
+
+38.
+def printlist(num):
+    list=[]
+    for n in range(1,num+1):
+        list.append(n**2)
+    print(list[-5:])
+printlist(20)
+
+39.
+def printlist(num):
+    list=[]
+    for n in range(1,num+1):
+        list.append(n**2)
+    print(list[5:])
+printlist(20)
+
+40.
+def printtuple(num):
+    list=[]
+    for n in range(1,num+1):
+        list.append(n**2)
+    list=tuple(list)
+    print(list)
+printtuple(20)
+
+41.
+def printtuple(tup):
+    print(tup[0:int(len(tup)/2)])
+    print(tup[int(len(tup)/2):])
+
+printtuple((1,2,3,4,5,6,7,8,9,10))
+
+42.
+def printtuple(tup):
+    list=[i for i in tup if i % 2 ==0]
+    print(tuple(list))
+
+printtuple((1,2,3,4,5,6,7,8,9,10))
+
+43.
+tup=1,2,3,4,5,6,7,8,9,10
+list=[i for i in tup if i % 2 ==0]
+tup2=tuple(list)
+print(tup2)
+
+44.
+inp="YES"
+
+if inp.lower() == "yes":
+    print("Yes")
+else:
+    print("No")
+
+45.
+inp=[1,2,3,4,5,6,7,8,9,10]
+
+filtered=filter(lambda n:n%2==0, inp)
+print(list(filtered))
+
+46.
+inp=[1,2,3,4,5,6,7,8,9,10]
+
+squares=map(lambda n:n**2, inp)
+print(list(squares))
+
+47.
+inp=[1,2,3,4,5,6,7,8,9,10]
+
+output=map(lambda n:n**2, (filter(lambda n:n%2==0, inp)))
+print(list(output))
+
+48.
+Question:
+Write a program which can filter() to make a list whose elements are even number between 1 and 20 (both included).
+
+Hints:
+
+Use filter() to filter elements of a list.
+Use lambda to define anonymous functions.
