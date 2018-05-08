@@ -235,3 +235,27 @@ num1=numgen()
 print(num1.returnlist(100))
 
 21.
+usrinp="UP 5, DOWN 3, LEFT 3, RIGHT 2"
+
+direction=[w for w in usrinp.split(" ") if w.isalpha()]
+nums=[int(n[0]) for n in usrinp.split(" ") if n not in direction]
+
+position={"x":0,"y":0}
+
+count=0
+for m in direction:
+    if m == "UP":
+        position["x"]+=int(nums[count])
+    elif m == "DOWN":
+        position["x"]-=int(nums[count])
+    elif m == "RIGHT":
+        position["y"]+=int(nums[count])
+    elif m == "LEFT":
+        position["y"]-=int(nums[count])
+    count+=1
+
+fromstart=(abs(position["x"]-0)+abs(position["y"]-0))
+
+print("Starting Position: 0,0")
+print("Current Position: %d,%d" % (position["x"],position["y"]))
+print("User is %d moves from starting position." % fromstart)
