@@ -475,10 +475,154 @@ output=map(lambda n:n**2, (filter(lambda n:n%2==0, inp)))
 print(list(output))
 
 48.
-Question:
-Write a program which can filter() to make a list whose elements are even number between 1 and 20 (both included).
+even=filter(lambda n:n%2==0, range(1,21))
+print(list(even))
 
-Hints:
+49.
+square=map(lambda n:n**2, range(1,21))
+print(list(square))
 
-Use filter() to filter elements of a list.
-Use lambda to define anonymous functions.
+50.
+class American(object):
+    def __init__(self):
+        self.self=self
+    @staticmethod
+    def printNationality():
+        print("American")
+
+american=American()
+american.printNationality()
+
+51.
+class American(object):
+    def __init__(self):
+        self.self=self
+    @staticmethod
+    def printNationality():
+        print("American")
+class NewYorker(American):
+    def __init__(self):
+        self.self=self
+
+american=American()
+newyorker=NewYorker()
+newyorker.printNationality()
+
+52.
+class Circle():
+    def __init__(self,radius):
+        self.radius=radius
+    def computeArea(self):
+        area=3.14*(self.radius**2)
+        print("Area of Circle: %d" % area)
+
+
+circle=Circle(15)
+circle.computeArea()
+
+53.
+class Rectangle():
+    def __init__(self, length, width):
+        self.length=length
+        self.width=width
+    def area(self):
+        print("Area of Rectangle with Length %d & Width %d is: %d" % (self.length, self.width, self.length*self.width))
+
+rectangle=Rectangle(15,12)
+rectangle.area()
+
+54.
+class Shape(object):
+    def __init__():
+        pass
+    def printArea():
+        print(0)
+
+class Square(Shape):
+    def __init__(self, length):
+        self.length=length
+    def printArea(self):
+        print("Area of Square with Length %d is %d" % (self.length, self.length**2))
+
+square=Square(15)
+square.printArea()
+Shape.printArea()
+
+55.
+raise RuntimeError("Error, son!")
+
+56.
+def exception():
+    print(5/0)
+
+try:
+    exception()
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except (Exception, err):
+    print("Caught exception.")
+finally:
+    print("End")
+
+57.
+class SubError(Exception):
+    def __init__(self, msg):
+        self.msg=msg
+
+error=SubError("Oh no Jeff, it's all gon' tits up!")
+print(error.msg)
+
+58.
+emails=["john@google.com", "jeff@jeffald.com", "jeffaldine@jeffald.com"]
+
+for e in emails:
+    e=e.split("@")
+    print(e[0])
+    
+59.
+import re
+
+emails=["john@google.com", "jeff@jeffald.com", "jeffaldine@jeffald.com"]
+
+for e in emails:
+    form="(\w+)@(\w+)(\.com)"
+    ret=re.match(form, e)
+    print(ret.group(2))
+
+60.
+import re
+
+usrinp="2 cats and 3 dogs."
+
+digits=re.findall("\d", usrinp)
+
+print(digits)
+
+61.
+uniString=u"Hello World!"
+print(uniString)
+
+62.
+Not possible on Python 3
+
+63.
+# -*- coding: utf-8 -*-
+uniString=u"Hello World!"
+print(uniString)
+
+64.
+usrinp=5
+ret=0
+for n in range(1,usrinp+1):
+    ret+=(n)/(n+1)
+    print(ret)
+
+65.
+def f(n):
+    if n == 0:
+        return 0
+    return f(n-1)+100
+num=5
+print(f(num))
+
+66.
