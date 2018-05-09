@@ -626,3 +626,55 @@ num=5
 print(f(num))
 
 66.
+def f(n):
+    if n ==0:
+        return 0
+    elif n ==1:
+        return 1
+    else:
+        return f(n-1)+f(n-2)
+num=7
+print(f(num))
+
+67.
+def f(n):
+    if n ==0:
+        return 0
+    elif n ==1:
+        return 1
+    else:
+        return f(n-1)+f(n-2)
+
+def fib(num):
+    fibonacci=[]
+    for n in range(0,num+1):
+        fibonacci.append(str(f(n)))
+    return ",".join(fibonacci)
+
+print(fib(7))
+
+68.
+def evenGen(num):
+    for n in range(0,num+1):
+        if n % 2 ==0:
+            yield n
+            
+even=evenGen(10)
+evenlist=[]
+for n in even:
+    evenlist.append(str(n))
+print(",".join(evenlist))
+
+69.
+def divby(num):
+    for n in range(0,num+1):
+        if n % 5 ==0 and n % 7 ==0:
+            yield n
+            
+ret=divby(100)
+retlist=[]
+for n in ret:
+    retlist.append(str(n))
+print(",".join(retlist))
+
+70.
