@@ -678,12 +678,150 @@ for n in ret:
 print(",".join(retlist))
 
 70.
+usrinp=[2,4,6,8,9]
+
+for n in usrinp:
+    assert(n%2==0)
+
+71.
+usrinp="35+3"
+
+print(eval(usrinp))
+
+72.
+import math
+def bin_search(li, element):
+    bottom = 0
+    top = len(li)-1
+    index = -1
+    while top>=bottom and index==-1:
+        mid = int(math.floor((top+bottom)/2.0))
+        if li[mid]==element:
+            index = mid
+        elif li[mid]>element:
+            top = mid-1
+        else:
+            bottom = mid+1
+        print(li[bottom], li[top])
+    return index
+
+li=[2,5,7,9,11,12,17,222]
+print(bin_search(li,11))
+print(bin_search(li,5))
+
+73.
+import random
+
+for i in range(0,1):
+    i=0
+    while i <10:
+        i=random.random()*100
+    print(i)
+74.
+import random
+
+for i in range(0,1):
+    i=0
+    while i <5:
+        i=random.random()*100
+        if i > 95:
+            i=0
+    print(i)
+
+75.
+from random import randint
+
+even=[i for i in range(1,11) if i%2==0]
+print(even[randint(0, len(even)-1)])
+
+OR
+
+import random
+
+print(random.choice([i for i in range(1,10) if i %2==0]))
+
+76.
+import random
+
+print(random.choice([i for i in range(1,500) if i %5==0 and i%7==0]))
+
+77.
+import random
+
+numbers=random.sample(range(100,200),5)
+print(numbers)
+
+78.
+import random
+
+numbers=random.sample([i for i in range(100,200) if i%2==0],5)
+print(numbers)
+
+79.
+import random
+
+numbers=random.sample([i for i in range(1,1000) if i%5==0 and i%7==0],5)
+print(numbers)
+
+80.
+import random
+
+print(random.randrange(7,15))
+
+81.
+import zlib
+string="hello world!hello world!hello world!hello world!"
+byt=bytes(string,"utf-8")
+print(zlib.compress(byt))
+print(zlib.decompress(byt))
+
+82.
+import timeit
+
+t=timeit.Timer("for i in range(100):1+1")
+print(t.timeit())
+
+83.
+import random 
+
+li=[3,6,7,8]
+random.shuffle(li)
+print(li)
+
+84.
+subject=["I","You"]
+verb=["Play", "Love"]
+object=["Hockey", "Football"]
+for s in subject:
+    for v in verb:
+        for o in object:
+            string="%s %s %s" % (s,v,o)
+            print(string)
+
+85.
+li=[5,6,77,45,22,12,24]
+print([i for i in li if i%2!=0])
+
+86.
+li=[12,24,35,70,88,120,155]
+li=[i for i in li if i%5!=0 and i%7!=0]
+print(li)
+
+87.
+li=[12,24,35,70,88,120,155]
+li=[i for i in li if li.index(i)%2!=0]
+print(li)
+
+88.
+array=[[[0 for i in range(8)] for i in range(5)]for i in range(3)]
+for r in array:
+    print(r)
+
+89.
 Question:
 
-
-Please write assert statements to verify that every number in the list [2,4,6,8] is even.
-
-
+By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers in [12,24,35,70,88,120,155].
 
 Hints:
-Use "assert expression" to make assertion.
+Use list comprehension to delete a bunch of element from a list.
+Use enumerate() to get (index, value) tuple.
