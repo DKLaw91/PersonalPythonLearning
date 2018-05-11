@@ -1,7 +1,4 @@
 def dartscore(sect,darts,targ):
-    def retsco(score,darts):
-        for n in score:
-            return n * darts
     points=[[i for i in sect]for i in range(darts)]
     poss=[]
     for d1 in points[0]:
