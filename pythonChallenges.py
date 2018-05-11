@@ -818,10 +818,89 @@ for r in array:
     print(r)
 
 89.
-Question:
+li=[12,24,35,70,88,120,155]
+def remind(list,nums):
+    newli=[v for i,v in enumerate(list) if i not in nums]
+    return newli
+li=remind(li,[0,4,5])
+print(li)
 
-By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers in [12,24,35,70,88,120,155].
+90.
+li=[12,24,35,70,88,120,155]
+li.remove(24)
+print(li)
 
-Hints:
-Use list comprehension to delete a bunch of element from a list.
-Use enumerate() to get (index, value) tuple.
+91.
+li1=set([1,3,6,78,35,55])
+li2=set([12,24,35,24,88,120,155])
+li1 &= li2
+inter=list(li1)
+print(inter)
+
+92.
+li1=[12,24,35,24,88,120,155,88,120,155]
+def remdup(list):
+    newli=[]
+    for i in list:
+        if i not in newli:
+            newli.append(i)
+    return newli
+print(remdup(li1))
+
+93.
+class Person(object):
+    def getGender(self):
+        print("Unknown")
+
+class Male(Person):
+    def getGender(self):
+        print("Male")
+        
+class Female(Person):
+    def getGender(self):
+        print("Female")
+
+
+Jeff=Male()
+Jeffaldine=Female()
+Jeffald=Person()
+
+Jeff.getGender()
+Jeffaldine.getGender()
+Jeffald.getGender()
+
+94.
+usrinp="abcdefgabccdegf"
+letc={}
+for l in usrinp:
+    letc[l]=letc.get(l,0)+1
+print("\n".join(["%s, %d" % (k,v) for k,v in letc.items()]))
+
+95.
+usrinp="rise to vote sir"
+li=[l for l in usrinp[::-1]]
+print("".join(li))
+
+96.
+usrinp="H1e2l3l4o5w6o7r8l9d"
+li=[l for l in usrinp[::2]]
+print("".join(li))
+
+97.
+import itertools
+li=[1,2,3]
+for p in itertools.permutations(li):
+    print(p)
+
+98.
+chicks=[]
+rabs=[]
+for h in range(35):
+    chicks.append(h*2)
+    rabs.append(h*4)
+
+for c in chicks:
+    for r in rabs:
+        if c+r==94:
+            if chicks.index(c) + rabs.index(r) == 35:
+                print("%d chickens and %d rabbits = 35 heads and 94 legs" % (chicks.index(c),rabs.index(r)))
