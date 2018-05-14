@@ -24,6 +24,8 @@ https://www.reddit.com/r/dailyprogrammer/search?q=%5Beasy%5D&sort=new&restrict_s
 
 https://edabit.com/explore?lang=python
 
+https://www.programiz.com
+
 #C++ Learning#
 
 http://www.learncpp.com/cpp-tutorial/1-3a-a-first-look-at-cout-cin-endl/
